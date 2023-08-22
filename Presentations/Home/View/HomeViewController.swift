@@ -7,14 +7,28 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, StoryboardInstantiable {
 
+    @IBOutlet weak var btnLogout: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initView()
         // Do any additional setup after loading the view.
     }
     
+    
+    func initView(){
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        btnLogout.addTarget(self, action: #selector(logout), for: .touchUpInside)
+    }
+    
+    @objc func logout() {
+        let _ = KeychainManager.shared.deleteToken()
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScene = scenes.first as? UIWindowScene
+        let window = windowScene?.windows.first
+        window?.rootViewController = CustomNavigationController(rootViewController: LoginViewController.instantiateViewController())
+    }
 
     /*
     // MARK: - Navigation
