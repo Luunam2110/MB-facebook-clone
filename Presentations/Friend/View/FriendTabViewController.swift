@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FriendTabViewController: UIViewController {
+class FriendTabViewController: UIViewController, StoryboardInstantiable {
 
     override func viewDidLoad() {
         super.viewDidLoad()

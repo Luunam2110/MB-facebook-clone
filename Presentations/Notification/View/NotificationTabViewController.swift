@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NotificationTabViewController: UIViewController {
+class NotificationTabViewController: UIViewController, StoryboardInstantiable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
