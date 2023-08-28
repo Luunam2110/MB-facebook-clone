@@ -1,0 +1,11 @@
+//
+//  Product.xcconfig
+//  facebook
+//
+//  Created by Namlv on 28/08/2023.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = "localhost:8080"
