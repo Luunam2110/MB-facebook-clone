@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  facebook
+
+  Created by Namlv on 03/09/2023.
+  
+*/
+"Cancelled!" = "Cancelled!";
+"Something wen't wrong!" = "Something wen't wrong!";
+"Not connect internet!" = "Not connect internet!";
+"Url is incorrect!" = "Url is incorrect!";
+"Non response" = "Non response";

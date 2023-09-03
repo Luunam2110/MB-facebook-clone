@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  facebook
+
+  Created by Namlv on 03/09/2023.
+  
+*/
+"Cancelled!" = "Đã bị hủy!";
+"Something wen't wrong!" = "Đã có lỗi sảy ra!";
+"Not connect internet!" = "Không có kết nối mạng!";
+"Url is incorrect!" = "Đường dẫn không chính sác!";
+"Non response" = "Không có kết quả";
+

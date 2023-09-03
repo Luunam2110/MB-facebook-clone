@@ -1,0 +1,5 @@
+
+#include "Pods/Target Support Files/Pods-facebook/Pods-facebook.debug staging.xcconfig"
+#include "Pods/Target Support Files/Pods-facebook/Pods-facebook.release staging.xcconfig"
+SCHEME = http
+BASE_URL = localhost:8080/
