@@ -7,7 +7,7 @@ final class LoginViewModel {
     
     var email: Observable<String>
     var error: Observable<String>
-
+    
     init (){
         self.authUseCase = AppDIContainer.shared.resolve(AuthUseCase.self)
         self.email = Observable("")
@@ -18,11 +18,19 @@ final class LoginViewModel {
         authUseCase.login(request: LoginRequest(useName: email, password: password)) { result in
             switch result {
             case .success(let res) :
+                AppState.shared.isAuthorited.value = true
+                UserDefaultsManager.shared.saveUser(res)
                 self.email.value = res.email
             case .failure(let err) :
                 self.error.value = err.message
             }
         }
     }
+    
+    deinit {
+        self.email.clearObservers()
+        self.error.clearObservers()
+    }
+    
     
 }

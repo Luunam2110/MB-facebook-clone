@@ -31,4 +31,8 @@ final class Observable<Value> {
             observer.block(self.value)
         }
     }
+    
+    func clearObservers() {
+        observers = [];
+    }
 }

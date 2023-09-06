@@ -24,10 +24,8 @@ class HomeViewController: UIViewController, StoryboardInstantiable {
     
     @objc func logout() {
         let _ = KeychainManager.shared.deleteToken()
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScene = scenes.first as? UIWindowScene
-        let window = windowScene?.windows.first
-        window?.rootViewController = CustomNavigationController(rootViewController: LoginViewController.instantiateViewController())
+        UserDefaultsManager.shared.removeUser()
+        AppState.shared.isAuthorited.value = false
     }
 
     /*

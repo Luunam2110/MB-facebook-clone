@@ -39,7 +39,7 @@
 		E96F331A2A9CF141008538D8 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F33192A9CF141008538D8 /* NetworkConfig.swift */; };
 		E96F331C2A9CF156008538D8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F331B2A9CF156008538D8 /* NetworkService.swift */; };
 		E96F33202A9CF19F008538D8 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F331F2A9CF19F008538D8 /* Observable.swift */; };
-		E96F33292A9CF329008538D8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F33282A9CF329008538D8 /* LoginModel.swift */; };
+		E96F33292A9CF329008538D8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F33282A9CF329008538D8 /* UserModel.swift */; };
 		E96F332B2A9CF3D6008538D8 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F332A2A9CF3D6008538D8 /* AuthUseCase.swift */; };
 		E96F332F2A9CF5D9008538D8 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F332E2A9CF5D9008538D8 /* LoginRequest.swift */; };
 		E96F33322A9CF7C2008538D8 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F33312A9CF7C2008538D8 /* Cancellable.swift */; };
@@ -64,6 +64,7 @@
 		E9CDAFA72A8D34650041326C /* FriendTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CDAFA62A8D34650041326C /* FriendTabViewController.swift */; };
 		E9CDAFAB2A8DAD3B0041326C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E9CDAFAA2A8DAD3B0041326C /* README.md */; };
 		E9CDAFAD2A8DADA30041326C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E9CDAFAC2A8DADA30041326C /* .gitignore */; };
+		E9F72E032AA8BF3A00AD0AB0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F72E022AA8BF3A00AD0AB0 /* AppState.swift */; };
 		E9F915502A9F8D810074F78B /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9154F2A9F8D810074F78B /* BaseResponse.swift */; };
 		E9F915532A9F9D200074F78B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F915522A9F9D200074F78B /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -141,7 +142,7 @@
 		E96F33192A9CF141008538D8 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		E96F331B2A9CF156008538D8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E96F331F2A9CF19F008538D8 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		E96F33282A9CF329008538D8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		E96F33282A9CF329008538D8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E96F332A2A9CF3D6008538D8 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
 		E96F332E2A9CF5D9008538D8 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		E96F33312A9CF7C2008538D8 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 		E9CDAFA62A8D34650041326C /* FriendTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTabViewController.swift; sourceTree = "<group>"; };
 		E9CDAFAA2A8DAD3B0041326C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E9CDAFAC2A8DADA30041326C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E9F72E022AA8BF3A00AD0AB0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E9F9154F2A9F8D810074F78B /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		E9F915522A9F9D200074F78B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F73ADD897A6F595B0DD64CB7 /* Pods_facebookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_facebookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -302,6 +304,7 @@
 				E94F30382A7EB71C001AAA87 /* AppDelegate.swift */,
 				E94F303A2A7EB71C001AAA87 /* SceneDelegate.swift */,
 				E96F32FD2A9CEFB3008538D8 /* AppConfigurations.swift */,
+				E9F72E022AA8BF3A00AD0AB0 /* AppState.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -377,8 +380,8 @@
 		E94F307E2A7EBA74001AAA87 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E9F72E062AA8D7DB00AD0AB0 /* User */,
 				E96F33272A9CF319008538D8 /* Common */,
-				E96F33262A9CF311008538D8 /* Auth */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -531,14 +534,6 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		E96F33262A9CF311008538D8 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				E96F33282A9CF329008538D8 /* LoginModel.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
 		E96F33272A9CF319008538D8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,6 +660,14 @@
 				E9CDAFA22A8D342F0041326C /* NotificationTabViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E9F72E062AA8D7DB00AD0AB0 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E96F33282A9CF329008538D8 /* UserModel.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		E9F9154D2A9F8D640074F78B /* Common */ = {
@@ -947,6 +950,7 @@
 				E99B4F7D2A9E3FE300CB8254 /* DataTransferError.swift in Sources */,
 				E94F30772A7EB9F2001AAA87 /* Alertable.swift in Sources */,
 				E96F33362A9CF83A008538D8 /* AuthUseCaseImpl.swift in Sources */,
+				E9F72E032AA8BF3A00AD0AB0 /* AppState.swift in Sources */,
 				E96F333A2A9CF88C008538D8 /* AuthRepositoryImpl.swift in Sources */,
 				E96F332F2A9CF5D9008538D8 /* LoginRequest.swift in Sources */,
 				E99B4F802A9E467A00CB8254 /* AppDiContainer.swift in Sources */,
@@ -975,7 +979,7 @@
 				E9CDAFA32A8D342F0041326C /* NotificationTabViewController.swift in Sources */,
 				E94F307D2A7EBA47001AAA87 /* UserDefaultsManager.swift in Sources */,
 				E94F30952A7EBD7E001AAA87 /* ProfileViewController.swift in Sources */,
-				E96F33292A9CF329008538D8 /* LoginModel.swift in Sources */,
+				E96F33292A9CF329008538D8 /* UserModel.swift in Sources */,
 				E96F33342A9CF7EA008538D8 /* DispatchQueueType.swift in Sources */,
 				E94F303B2A7EB71C001AAA87 /* SceneDelegate.swift in Sources */,
 				E96F32FE2A9CEFB3008538D8 /* AppConfigurations.swift in Sources */,

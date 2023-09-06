@@ -52,4 +52,9 @@ class LoginViewController: UIViewController , StoryboardInstantiable {
         }
     }
     
+    deinit {
+        viewModel?.error.remove(observer: self)
+        viewModel?.email.remove(observer: self)
+    }
+    
 }

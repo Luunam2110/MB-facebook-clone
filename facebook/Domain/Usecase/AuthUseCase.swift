@@ -8,6 +8,6 @@
 import Foundation
 protocol AuthUseCase {
     func login (request: LoginRequest,
-                complete: @escaping (Result<LoginModel, DataTransferError>) -> Void
+                complete: @escaping (Result<UserModel, DataTransferError>) -> Void
     ) -> Cancellable?
 }

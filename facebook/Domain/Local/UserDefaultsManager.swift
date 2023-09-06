@@ -10,26 +10,39 @@ import Foundation
 class UserDefaultsManager {
     static let shared = UserDefaultsManager()
     
-    private let appSetting = "APP_SETTING_CONFIG"
+    private let userKey = "USER"
     
     
     private let userDefaults = UserDefaults.standard
+    private let encoder = JSONEncoder()
+    private let decoder = JSONDecoder()
     
     private init() {}
     
-    
-    // Lưu trữ một giá trị vào UserDefaults
-    func saveSetting(_ value: ConfigDataModel) {
-        userDefaults.set(value, forKey: appSetting)
+    func saveUser(_ user : UserModel) {
+        do {
+            let data = try encoder.encode(user)
+            userDefaults.set(data, forKey: userKey)
+        } catch {
+            print("Unable to Encode User (\(error))")
+        }
+        
     }
     
-    // Truy xuất một giá trị từ UserDefaults
-    func getSetting() -> ConfigDataModel {
-        return userDefaults.value(forKey: appSetting) as? ConfigDataModel ?? ConfigDataModel()
+    func getUser() -> UserModel? {
+        if let data = UserDefaults.standard.data(forKey: userKey) {
+            do {
+                let user = try decoder.decode(UserModel.self, from: data)
+                return user;
+            } catch {
+                print("Unable to Decode Note (\(error))")
+            }
+        }
+        // Retrieve the encoded data from UserDefaults
+        return nil
     }
     
-    // Xóa một giá trị từ UserDefaults
-    func removeSetting() {
-        userDefaults.removeObject(forKey: appSetting)
+    func removeUser() {
+        userDefaults.removeObject(forKey: userKey)
     }
 }
