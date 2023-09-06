@@ -21,7 +21,7 @@ struct LoginResponse: Decodable {
 }
 
 extension LoginResponse {
-    func toDomain() -> LoginModel {
+    func toDomain() -> UserModel {
         return .init(email: email)
     }
 }

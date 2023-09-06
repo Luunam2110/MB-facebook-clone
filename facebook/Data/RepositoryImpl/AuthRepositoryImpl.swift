@@ -13,7 +13,7 @@ final class AuthRepositoryImpl {
 extension AuthRepositoryImpl: AuthRepository {
     func login(
         request: LoginRequest,
-        completion: @escaping (Result<LoginModel, DataTransferError>) -> Void
+        completion: @escaping (Result<UserModel, DataTransferError>) -> Void
     ) -> Cancellable? {
         
         let task = RepositoryTask()

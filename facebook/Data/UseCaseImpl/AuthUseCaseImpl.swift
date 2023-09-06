@@ -19,7 +19,7 @@ final class AuthUseCaseImpl {
 extension AuthUseCaseImpl: AuthUseCase {
     func login(
         request: LoginRequest,
-        complete: @escaping (Result<LoginModel, DataTransferError>) -> Void
+        complete: @escaping (Result<UserModel, DataTransferError>) -> Void
     ) -> Cancellable? {
         return authRepository.login(request: request, completion: complete)
     }
